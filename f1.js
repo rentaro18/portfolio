@@ -11,7 +11,7 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 			margin:'0',
 			transform:'translate(-50%,-50%)',
 			'font-size':'1.2rem',
-			color:'#333',
+			color:'transparent',
 		},
 		autoStyleContainer: false //自動付与のスタイルを切る
 	},
