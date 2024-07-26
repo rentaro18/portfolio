@@ -1,0 +1,247 @@
+html,body {
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: "Akaya Kanadaka", system-ui;
+  }
+  
+  body {
+    background: radial-gradient(ellipse farthest-side,rgb(152, 152, 152), rgb(71, 71, 71));
+    
+  }
+  
+  #splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      z-index: 999;
+      width: 110%;
+      height: 110%;
+      background:#333;
+      text-align:center;
+      color:#fff;
+    margin-top: -30px;
+    margin-left: -50px;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 300;
+  }
+  #splash_text{
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 100;
+    margin-top: 400px;
+  }
+  .menu {
+      top: 20px;
+      right: 0;
+      cursor: pointer;
+    }
+    strong{
+      position: fixed;
+      color: #050505;
+      top: 55px;
+      right: 8px;
+      width: 44px;
+      height: 12px;
+      z-index: 998;
+      font: normal normal bold 12px/1px BIZ UDPGothic;
+    }
+    .square-menu{
+      position: fixed;
+      top: 8px;
+      right: 0px;
+      width: 67px;
+      height: 65px;
+      
+      z-index: 999;
+    }
+    .hamburger {
+      display: block;
+      top: 30px;
+      right:10px;
+      width: 45px;
+      height: 5px;
+      background-color: #050505;
+      position: fixed;
+      transition: background-color 0.3s ease;
+      z-index: 999;
+    }
+    
+    .hamburger:before,
+    .hamburger:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #050505;
+      position: absolute;
+      transition: transform 0.3s ease;
+      
+    }
+    
+    .hamburger:before {
+      top: -10px;
+    }
+    
+    .hamburger:after {
+      bottom: -10px;
+      
+    }
+    
+    /* メニューの開閉時のスタイル */
+    #menu-toggle:checked + .menu .hamburger {
+      background-color: transparent;
+    }
+    
+    #menu-toggle:checked + .menu .hamburger:before {
+      transform: translateY(10px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked + .menu .hamburger:after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+    
+    /* メニューのコンテンツ */
+    .menu-content {
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background: #FFD610;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+  
+    input[type="checkbox"]:checked ~ .menu-content {
+      right: 0;
+    }
+    
+    .menu-content nav {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  
+    
+    .menu-content ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    
+    .menu-content ul li {
+      margin-bottom: 20px;
+    }
+    
+    .menu-content ul li a {
+      color: #FFFFFF;
+      font-size: 20px;
+    }
+    
+    /* チェックボックスを隠す */
+    .hidden {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  
+  
+    .home1 ul{
+      display: flex;
+      margin-left: -65px;
+      
+    }
+    
+    .home2 ul{
+      display: flex;
+      margin-left: -15px;
+      margin-top: -30px;
+      
+      
+    }
+    .home3 ul{
+      display: flex;
+      margin-left: -10px;
+      margin-top: -70px;
+      
+      z-index: 2;
+    }
+    .img1{
+      margin-top: 60px;
+    }
+    .img2{
+      margin-left: -40px;
+      margin-top: 90px;
+  
+    }
+    .img3{
+      margin-left: -20px;
+      margin-top: 5px;
+    }
+    .img4{
+      margin-left: 0px;
+      margin-top: -8px;
+    }
+    .img5{
+      z-index: 2;
+      margin-left: -24px;
+      margin-top: 13px;
+    }
+    .img6{
+      margin-left: -40px;
+      margin-top: 50px;
+      z-index: 1;
+    }
+    .img1 img {
+      transition: transform 0.5s ease;
+      
+    }
+    
+    .img1 img:hover {
+      transform: scale(1.1);
+    }
+    .img2 img {
+      transition: transform 0.5s ease;
+    }
+    
+    .img2 img:hover {
+      transform: scale(1.1);
+    }
+    .img3 img {
+      transition: transform 0.5s ease;
+    }
+    
+    .img3 img:hover {
+      transform: scale(1.1);
+    }
+    .img4 img {
+      transition: transform 0.5s ease;
+    }
+    
+    .img4 img:hover {
+      transform: scale(1.1);
+    }
+    .img5 img {
+      transition: transform 0.5s ease;
+    }
+    
+    .img5 img:hover {
+      transform: scale(1.1);
+    }
+    
+    .img6 img {
+      transition: transform 0.5s ease;
+    }
+    
+    .img6 img:hover {
+      transform: scale(1.1);
+    }
