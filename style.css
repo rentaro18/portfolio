@@ -180,6 +180,7 @@ html,body {
       z-index: 2;
     }
     .img1{
+        margin: 5px;
       margin-top: 60px;
     }
     .img2{
@@ -188,16 +189,16 @@ html,body {
   
     }
     .img3{
-      margin-left: -20px;
+      margin-left: -15px;
       margin-top: 5px;
     }
     .img4{
-      margin-left: 0px;
+      margin-left: 3px;
       margin-top: -8px;
     }
     .img5{
       z-index: 2;
-      margin-left: -24px;
+      margin-left: -18px;
       margin-top: 13px;
     }
     .img6{
