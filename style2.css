@@ -211,24 +211,36 @@ html,body {
     #back-link:hover {
         transform: scale(1.1);
     }
-    .profi ul{
-        display: flex;
-        list-style-type: none;
-    }
-    .myph{
-        z-index: 1500;
-        margin: auto;
-        margin-left: -270px;
-        margin-top: 100px;
-    }
-    .proimg{
-        margin-left: -80px;
-        list-style-type: none;
-        margin-top: -20px;
-        z-index: 1000;
-    }
-
-    .profi h2{
-       display: flex;
-       z-index: 1200;
-    }
+    .profi {
+      position: relative; /* 親要素を基準にするために相対位置を設定 */
+  }
+  
+  .proimg {
+      position: relative;
+      z-index: 1; /* ベースの画像を最下層に設定 */
+      margin-left: -85px;
+  }
+  
+  .myph {
+      position: absolute;
+      top: 40%; /* 位置を調整 */
+      left: 50%;
+      transform: translate(-50%, -50%); /* 中央に配置 */
+      z-index: 2; /* 重ねる要素を上層に設定 */
+      text-align: center; /* テキストを中央揃え */
+  }
+  
+  .myph img {
+      display: block;
+      margin: 0 auto;
+  }
+  
+  .myph p {
+      margin-top: 10px; /* 画像との間隔を調整 */
+      font-size: 1.5rem; /* 文字サイズを調整 */
+      font-weight: bold;
+      color: #000; /* テキストカラーを設定 */
+  }
+  .profi ul{
+    list-style-type: none;
+  }
