@@ -21,10 +21,11 @@
             <nav class="m">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#INFORMATION">Information</a></li>
-                     <li><a href="#RECRUIT">Recruit</a></li>
-                    <li><a href="#CONTACT">Contact</a></li>
+                    <li><a href="#work1">work1</a></li>
+                    <li><a href="#work2">work2</a></li>
+                     <li><a href="#work3">work3</a></li>
+                    <li><a href="#work4">work4</a></li>
+                    <li><a href="#contact">Contact</a></li>
 
                 </ul>
             </nav>
@@ -71,5 +72,19 @@
 <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
 <script src="f1.js"></script>
+<script>
+    // クエリパラメータをチェックしてローディング画面を表示するかどうかを決定
+    if (window.location.search.indexOf('skipLoading') === -1) {
+        // ローディング画面を表示
+        $('#splash').show();
+    } else {
+        // ローディング画面を非表示
+        $('#splash').hide();
+    }
+    if (window.location.search.indexOf('skipLoading') !== -1) {
+        var url = window.location.href.split('?')[0];
+        window.history.replaceState(null, null, url);
+    }
+</script>
 </body>
 </html>

@@ -159,96 +159,52 @@ html,body {
       height: 1px;
       overflow: hidden;
     }
-  
-  
-    .home1 ul{
-      display: flex;
-      margin-left: -65px;
-      
+
+
+    .arrow {
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+      z-index: 1500;
     }
     
-    .home2 ul{
-      display: flex;
-      margin-left: -15px;
-      margin-top: -30px;
-      
-      
-    }
-    .home3 ul{
-      display: flex;
-      margin-left: -10px;
-      margin-top: -70px;
-      
-      z-index: 2;
-    }
-    .img1{
-        margin: 5px;
-      margin-top: 60px;
-    }
-    .img2{
-      margin-left: -40px;
-      margin-top: 90px;
-  
-    }
-    .img3{
-      margin-left: -15px;
-      margin-top: 5px;
-    }
-    .img4{
-      margin-left: 3px;
-      margin-top: -8px;
-    }
-    .img5{
-      z-index: 2;
-      margin-left: -18px;
-      margin-top: 13px;
-    }
-    .img6{
-      margin-left: -40px;
-      margin-top: 50px;
-      z-index: 1;
-    }
-    .img1 img {
-      transition: transform 0.5s ease;
-      
+    .arrow::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-top: solid 5px #050505;
+      border-right: solid 5px #050505;
+      position: absolute;
+      left: 10px;
+      top: 18px;
     }
     
-    .img1 img:hover {
-      transform: scale(1.1);
-    }
-    .img2 img {
-      transition: transform 0.5s ease;
+    .arrow.arrow-top::before {
+      transform: rotate(-45deg);
+      top: 10px;
     }
     
-    .img2 img:hover {
-      transform: scale(1.1);
-    }
-    .img3 img {
-      transition: transform 0.5s ease;
+    .arrow.arrow-bottom::before {
+      transform: rotate(135deg);
     }
     
-    .img3 img:hover {
-      transform: scale(1.1);
-    }
-    .img4 img {
-      transition: transform 0.5s ease;
+    .arrow.arrow-left::before {
+      transform: rotate(-135deg);
     }
     
-    .img4 img:hover {
-      transform: scale(1.1);
+    .arrow.arrow-right::before {
+      transform: rotate(45deg);
     }
-    .img5 img {
-      transition: transform 0.5s ease;
+    .arrow:hover {
+        transform: scale(1.1);
+      }
+      #back-link {
+        text-decoration: none;
+        color: #050505; 
+        font-size: 3rem; 
+        font-weight: bold;
+        transition: transform 0.3s ease;
     }
-    
-    .img5 img:hover {
-      transform: scale(1.1);
-    }
-    
-    .img6 img {
-      transition: transform 0.5s ease;
-    }
-    
-    .img6 img:hover {
-      transform: scale(1.1);
+    #back-link:hover {
+        transform: scale(1.1);
     }
