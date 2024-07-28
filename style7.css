@@ -267,27 +267,42 @@ html,body {
     margin: 0 auto; /* 中央揃え */
 }
 
-  .icon-grid {
+.mycon {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* 縦向きに並べる */
     justify-content: center;
-    gap: 20px; /* アイコン間の隙間 */
-    margin-top: 20px; /* 上部との間隔 */
-    margin-left: 30px;
+    align-items: center;
     position: absolute;
-    bottom: 60px;
-    left: 105%;
-    transform: translateX(-50%);
-    width: 90%; /* 必要に応じて幅を調整 */
+    top: 50%; /* 位置を調整 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 3rem; /* アイコンのサイズを大きくする */
 }
 
-.icon {
-    flex: 0 0 calc(25% - 20px); /* アイコンの幅を設定 */
-    box-sizing: border-box;
-    text-align: center;
+.mycon ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.icon img {
-    max-width: 200%;
-    height: auto;
+.mycon li {
+    margin-bottom: 1rem; /* アイコンの間隔を調整 */
 }
+
+.mycon li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.5s transform, 0.5s color;
+    background-image: linear-gradient(to right, #250a0a 0%, #71d2b2 19%, #89b8c4 42%, #2e1b52 79%, #b4d6de 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.mycon li a:hover {
+    color: transparent;
+    transform: scale(1.5);
+}
+/* ここまで追加 */
