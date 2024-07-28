@@ -5,27 +5,27 @@ html,body {
   
   body {
     font-family: "Akaya Kanadaka", system-ui;
+    margin: 0;
+    padding: 0;
   }
   
   body {
   background-color: #5d5c5c;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" /></svg>');
   background-repeat: repeat;
-  margin: 0;
-  padding: 0;
   }
   
   #splash {
     /*fixedで全面に固定*/
       position: fixed;
       z-index: 999;
-      width: 120%;
-      height: 120%;
+      width: 110%;
+      height: 110%;
       background:#333;
       text-align:center;
       color:#fff;
     margin-top: -30px;
-    margin-left: -30px;
+    margin-left: -40px;
     font-size: 4rem;
     font-style: normal;
     font-weight: 300;
@@ -35,7 +35,7 @@ html,body {
     font-style: normal;
     font-weight: 100;
     margin-top: 280px;
-    margin-left: 1px;
+    margin-left: 45px;
     
   }
   
@@ -162,100 +162,137 @@ html,body {
       height: 1px;
       overflow: hidden;
     }
+
+
+    .arrow {
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+      z-index: 1500;
+    }
+    
+    .arrow::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-top: solid 5px #050505;
+      border-right: solid 5px #050505;
+      position: absolute;
+      left: 10px;
+      top: 18px;
+    }
+    
+    .arrow.arrow-top::before {
+      transform: rotate(-45deg);
+      top: 10px;
+    }
+    
+    .arrow.arrow-bottom::before {
+      transform: rotate(135deg);
+    }
+    
+    .arrow.arrow-left::before {
+      transform: rotate(-135deg);
+    }
+    
+    .arrow.arrow-right::before {
+      transform: rotate(45deg);
+    }
+    .arrow:hover {
+        transform: scale(1.1);
+      }
+      #back-link {
+        text-decoration: none;
+        color: #050505; 
+        font-size: 3rem; 
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    #back-link:hover {
+        transform: scale(1.1);
+    }
+    .profi {
+      position: relative; /* 親要素を基準にするために相対位置を設定 */
+      display: flex; /* 追加 */
+    justify-content: center; /* 追加 */
+    align-items: center; /* 追加 */
+    height: 100vh; /* 追加 */
+  }
   
+  .proimg {
+      position: relative;
+      z-index: 1; /* ベースの画像を最下層に設定 */
+      width: 50%; /* 追加 */
+    max-width: 600px; /* 追加 */
+    margin: 0 auto; /* 追加 */
+    margin-left: -40px;
+    margin-top: -10px;
+  }
+  .fixed-img {
+    width: 100%; /* 追加 */
+    height: auto; /* 追加 */
+}
   
-    .home1 ul{
-      display: flex;
-      margin-left: -60px;
-      
-    }
-    
-    .home2 ul{
-      display: flex;
-      margin-left: -10px;
-      margin-top: -30px;
-      
-      
-    }
-    .home3 ul{
-      display: flex;
-      margin-left: -5px;
-      margin-top: -70px;
-      
-      z-index: 2;
-    }
-    .img1{
-      margin-left: 2px;
-      margin-top: 60px;
-    }
-    .img2{
-      margin-left: -40px;
-      margin-top: 90px;
+  .myph {
+      position: absolute;
+      top: 40%; /* 位置を調整 */
+      left: 50%;
+      transform: translate(-50%, -50%); /* 中央に配置 */
+      z-index: 2; /* 重ねる要素を上層に設定 */
+      text-align: center; /* テキストを中央揃え */
+  }
   
-    }
-    .img3{
-      margin-left: -18px;
-      margin-top: 5px;
-    }
-    .img4{
-      margin-left: 3px;
-      margin-top: -8px;
-    }
-    .img5{
-      z-index: 2;
-      margin-left: -21px;
-      margin-top: 13px;
-    }
-    .img6{
-      margin-left: -40px;
-      margin-top: 50px;
-      z-index: 1;
-    }
-    .img1 img {
-      transition: transform 0.5s ease;
-      
-    }
-    
-    .img1 img:hover {
-      transform: scale(1.1);
-    }
-    .img2 img {
-      transition: transform 0.5s ease;
-    }
-    
-    .img2 img:hover {
-      transform: scale(1.1);
-    }
-    .img3 img {
-      transition: transform 0.5s ease;
-    }
-    
-    .img3 img:hover {
-      transform: scale(1.1);
-    }
-    .img4 img {
-      transition: transform 0.5s ease;
-    }
-    
-    .img4 img:hover {
-      transform: scale(1.1);
-    }
-    .img5 img {
-      transition: transform 0.5s ease;
-    }
-    
-    .img5 img:hover {
-      transform: scale(1.1);
-    }
-    
-    .img6 img {
-      transition: transform 0.5s ease;
-    }
-    
-    .img6 img:hover {
-      transform: scale(1.1);
-    }
-    .home1 ul, .home2 ul, .home3 ul{
-        list-style-type: none;
-    }
-    
+  .myph img {
+      display: block;
+      margin: 0 auto;
+  }
+  
+  .myph p {
+      margin-top: 10px; /* 画像との間隔を調整 */
+      font-size: 1.5rem; /* 文字サイズを調整 */
+      font-weight: bold;
+      color: #000; /* テキストカラーを設定 */
+  }
+  .profi ul{
+    list-style-type: none;
+  }
+  .myph .g1{
+    font-size: 1rem;
+  }
+  .responsive-img {
+    width: 100%; /* 画像をコンテナの幅に合わせる */
+    height: auto; /* アスペクト比を維持する */
+    max-width: 600px; /* 必要に応じて最大幅を設定 */
+    display: block; /* 画像をブロック要素にする */
+    margin: 0 auto; /* 中央揃え */
+}
+
+  .icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* アイコン間の隙間 */
+    margin-top: 20px; /* 上部との間隔 */
+    margin-left: 30px;
+    position: absolute;
+    bottom: 60px;
+    left: 105%;
+    transform: translateX(-50%);
+    width: 90%; /* 必要に応じて幅を調整 */
+}
+
+.icon {
+    flex: 0 0 calc(25% - 20px); /* アイコンの幅を設定 */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.icon img {
+    max-width: 200%;
+    height: auto;
+}
+.sw-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* 画像間の隙間を調整 */
+}
