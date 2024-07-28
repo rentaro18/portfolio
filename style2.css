@@ -1,6 +1,6 @@
 html,body {
     overflow-x: hidden;
-    overflow-y: hidden;
+    
   }
   
   body {
@@ -240,6 +240,7 @@ html,body {
       transform: translate(-50%, -50%); /* 中央に配置 */
       z-index: 2; /* 重ねる要素を上層に設定 */
       text-align: center; /* テキストを中央揃え */
+      font-family:sans-serif;
   }
   
   .myph img {

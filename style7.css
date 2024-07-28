@@ -1,6 +1,6 @@
 html,body {
     overflow-x: hidden;
-    overflow-y: hidden;
+    
   }
   
   body {
@@ -240,6 +240,7 @@ html,body {
       transform: translate(-50%, -50%); /* 中央に配置 */
       z-index: 2; /* 重ねる要素を上層に設定 */
       text-align: center; /* テキストを中央揃え */
+      font-family:sans-serif;
   }
   
   .myph img {
@@ -268,16 +269,17 @@ html,body {
 }
 
 .mycon {
-    display: flex;
-    flex-direction: column; /* 縦向きに並べる */
-    justify-content: center;
-    align-items: center;
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(2, 1fr); /* 2列に分ける */
+    gap: 3rem; /* アイコン間の隙間を設定 */
+    justify-content: center; /* 中央揃え */
     position: absolute;
     top: 50%; /* 位置を調整 */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    font-size: 3rem; /* アイコンのサイズを大きくする */
+    font-size: 5rem; /* アイコンのサイズを大きくする */
+    margin-left: 90px;
 }
 
 .mycon ul {
@@ -287,7 +289,7 @@ html,body {
 }
 
 .mycon li {
-    margin-bottom: 1rem; /* アイコンの間隔を調整 */
+    display: flex;
 }
 
 .mycon li a {
@@ -299,6 +301,7 @@ html,body {
     background-image: linear-gradient(to right, #250a0a 0%, #71d2b2 19%, #89b8c4 42%, #2e1b52 79%, #b4d6de 100%);
     -webkit-background-clip: text;
     background-clip: text;
+    
 }
 
 .mycon li a:hover {
