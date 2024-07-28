@@ -276,3 +276,11 @@ html,body {
     justify-content: center;
     gap: 10px; /* 画像間の隙間を調整 */
 }
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }

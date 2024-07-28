@@ -9,7 +9,7 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
     </style>
-<body>
+<body class="fade-in">
     <header>
         <input type="checkbox" id="menu-toggle" class="hidden">
         <label for="menu-toggle" class="menu">
@@ -58,7 +58,7 @@
         <p class="g1">愛知工業大学情報科学科<br>メディア情報専攻</p>
     </li>
     </ul>
-</div>
+    </div>
 
 
 
@@ -67,6 +67,17 @@
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script src="f1.js"></script>
- 
+    <script>
+        // ドキュメントが読み込まれたときにフェードインを適用
+        document.addEventListener('DOMContentLoaded', function() {
+            // フェードインを適用する要素を取得
+            var element = document.querySelector('.fade-in');
+    
+            // 要素にvisibleクラスを追加してフェードインさせる
+            setTimeout(function() {
+                element.classList.add('visible');
+            }, 100); // 適宜遅延を調整
+        });
+        </script>
 </body>
 </html>

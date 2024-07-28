@@ -271,3 +271,11 @@ html,body {
     display: block; /* 画像をブロック要素にする */
     margin: 0 auto; /* 中央揃え */
 }
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }

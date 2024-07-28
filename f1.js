@@ -27,3 +27,4 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 	$("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
     num=1;
 });
+

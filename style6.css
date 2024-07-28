@@ -295,4 +295,11 @@ html,body {
 .icon img {
     max-width: 200%;
     height: auto;
-}
+}.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
