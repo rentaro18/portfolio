@@ -266,28 +266,8 @@ html,body {
     display: block; /* 画像をブロック要素にする */
     margin: 0 auto; /* 中央揃え */
 }
-
-  .icon-grid {
+.ge-images {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* アイコン間の隙間 */
-    margin-top: 20px; /* 上部との間隔 */
-    margin-left: 30px;
-    position: absolute;
-    bottom: 60px;
-    left: 105%;
-    transform: translateX(-50%);
-    width: 90%; /* 必要に応じて幅を調整 */
-}
-
-.icon {
-    flex: 0 0 calc(25% - 20px); /* アイコンの幅を設定 */
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.icon img {
-    max-width: 200%;
-    height: auto;
+    gap: 10px; /* 画像間の隙間を調整 */
 }
