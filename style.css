@@ -16,28 +16,30 @@ html,body {
   }
   
   #splash {
-    /*fixedで全面に固定*/
-      position: fixed;
-      z-index: 999;
-      width: 120%;
-      height: 120%;
-      background:#333;
-      text-align:center;
-      color:#fff;
-    margin-top: -30px;
-    margin-left: -30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    text-align: center;
+    color: #fff;
     font-size: 4rem;
     font-style: normal;
     font-weight: 300;
-  }
-  #splash_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#splash_text {
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 100;
-    margin-top: 280px;
-    margin-left: 1px;
-    
-  }
+}
+
   
   
   .menu {
@@ -265,4 +267,12 @@ html,body {
       justify-items: center;
       text-align: center;
     }
-    
+    .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+      transition: transform 0.5s ease, filter 0.5s ease; /* ホバー時の変化をスムーズにする */
+  }
+  
+  .img1:hover img, .img2:hover img, .img3:hover img, .img4:hover img, .img5:hover img, .img6:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.5); /* 画像の明るさを半分にして黒色を表現 */
+  }
+  
